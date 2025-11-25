@@ -7,14 +7,16 @@ COMMIT_MSG=$(whiptail --title "Git Commit" --inputbox "Enter your commit message
 whiptail --yesno "Push to upstream branch 'main'?" 8 50
 if [ $? -eq 0 ]; then
   {
-    echo "[*] Adding all files..."
-    git add .
+echo "[GIT] $(date -Iseconds) Adding files..." >> "$LOG_FILE"
+git add . >> "$LOG_FILE" 2>&1
 
-    echo "[*] Committing with message: $COMMIT_MSG"
-    git commit -m "$COMMIT_MSG"
+echo "[GIT] $(date -Iseconds) Committing: $COMMIT_MSG" >> "$LOG_FILE"
+git commit -m "$COMMIT_MSG" >> "$LOG_FILE" 2>&1
 
-    echo "[*] Pushing to $GH_URL"
-    git branch -M main
+echo "[GITHUB] $(date -Iseconds) Pushing to origin/main..." >> "$LOG_FILE"
+git push -u origin main >> "$LOG_FILE" 2>&1
+
+echo "[✓] $(date -Iseconds) Push complete." >> "$LOG_FILE"    git branch -M main
     git push -u origin main
 
     echo "[✓] Push complete at $(date)"
