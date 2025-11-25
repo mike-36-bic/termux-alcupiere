@@ -1,0 +1,18 @@
+Acupieré Project — Reproducible Termux Environment Scaffold
+Copyright (C) 2025 Shane Soper
+
+This project is licensed under the GNU General Public License v3.0.
+
+You are free to:
+  - Use this software for any purpose
+  - Modify it to suit your needs
+  - Share it with others
+  - Distribute modified versions
+
+Under these conditions:
+  - You must include this license with any copies or forks
+  - You must disclose source code for any distributed modifications
+  - You cannot impose further restrictions beyond this license
+  - There is no warranty — use at your own risk
+
+For full legal terms, see: https://www.gnu.org/licenses/gpl-3.0.en.html
