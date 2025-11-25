@@ -1,8 +1,7 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
-source ~/garbageman/env/github.env
+source ~/termux-alcupiere/env/github.env
 LOG_FILE=~/termux-alcupiere/logs/git_push.log
-
 COMMIT_MSG=$(whiptail --title "Git Commit" --inputbox "Enter your commit message:" 10 60 3>&1 1>&2 2>&3)
 
 whiptail --yesno "Push to upstream branch 'main'?" 8 50

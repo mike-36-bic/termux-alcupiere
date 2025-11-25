@@ -1,6 +1,6 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
-PROJECT_ROOT="$HOME/termux-acupiere"
+PROJECT_ROOT="$HOME/termux-alcupiere"
 LOG_FILE="$PROJECT_ROOT/logs/init.log"
 ENV_FILE="$PROJECT_ROOT/env/github.env"
 
@@ -47,7 +47,7 @@ if git remote | grep -q origin; then
 else
   echo "[!] Git remote not set."
   read -p "Enter your GitHub username: " GH_USER
-  read -p "Enter your GitHub repo name (e.g., termux-acupiere): " GH_REPO
+  read -p "Enter your GitHub repo name (e.g., termux-alcupiere): " GH_REPO
   GH_URL="git@github.com:$GH_USER/$GH_REPO.git"
 
   echo "[+] Adding remote origin: $GH_URL"
